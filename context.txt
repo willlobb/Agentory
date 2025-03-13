@@ -1,0 +1,78 @@
+========================================
+Project Context File
+========================================
+
+1. Project Overview:
+--------------------
+- Description: A website that allows users to search for AI agents for specific tasks, as well as upload and share their own AI agents for others to buy or rent.
+- Purpose: To create an accessible online marketplace for AI agents where users can both find solutions for specific needs and monetize their own agents.
+- Key Functionalities:
+  - User Authentication: Login with Google using Firebase.
+  - Profile Management: User profiles to manage personal information and uploaded agents.
+  - AI Agent Marketplace: Browse, search, and filter AI agents.
+  - Upload & Sharing: Enable users to upload and share their own AI agents.
+  - Transaction Support: Facilitate buying or renting of AI agents.
+
+2. Dependencies & Technologies:
+-------------------------------
+- Front-end: React JS
+- Backend & Services: Firebase (for authentication, storage, and database)
+- Additional: Other libraries and tools as needed
+
+3. Architecture & File Structure:
+----------------------------------
+- Standard web application with a React-based front end and Firebase backend.
+- Component-based architecture for modularity and reusability.
+- Firebase integration handles user authentication and data management.
+
+4. Project Layout:
+------------------
+├── LICENSE
+├── README.md
+├── context.txt        
+└── sandbox-project
+    ├── .gitignore
+    ├── README.md
+    ├── eslint.config.js
+    ├── index.html
+    ├── package-lock.json
+    ├── package.json
+    ├── public
+    │   └── vite.svg
+    ├── src
+    │   ├── App.css
+    │   ├── App.jsx
+    │   ├── assets
+    │   │   └── react.svg
+    │   ├── index.css
+    │   └── main.jsx
+    └── vite.config.js
+
+5. Setup & Build Instructions:
+------------------------------
+- Ensure Node.js and npm are installed.
+- Clone the repository.
+- Run `npm install` to install dependencies.
+- Set up your Firebase project and update the configuration in the project.
+- Launch the development server using `npm start` or `npm run dev` (depending on your setup).
+- Build for production with `npm run build` (if applicable).
+
+6. Coding Guidelines:
+--------------------
+- Follow React best practices and maintain a component-based architecture.
+- Write clean, maintainable, and modular code using JavaScript/ES6 standards.
+- Include clear comments and documentation, especially for complex logic.
+- Use consistent styling and code formatting throughout the project.
+
+7. Known Issues & Future Enhancements:
+---------------------------------------
+- Initial version focuses on core functionalities; advanced features like payment systems may be integrated later.
+- Future improvements may include enhanced search/filter functionality and additional authentication methods.
+- Consider scalability and performance optimizations as the user base grows.
+
+8. LLM Instructions for Project Layout Updates:
+------------------------------------------------
+- ALWAYS update the "Project Layout" section in this context file to accurately reflect any additions or removals of files or directories in the project.
+- Ensure that the context file (context.txt) is included in the project layout and updated accordingly.
+
+========================================
