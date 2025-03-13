@@ -4,13 +4,18 @@ Project Context File
 
 1. Project Overview:
 --------------------
-- Description: A website that allows users to search for AI agents for specific tasks, as well as upload and share their own AI agents for others to buy or rent.
-- Purpose: To create an accessible online marketplace for AI agents where users can both find solutions for specific needs and monetize their own agents.
-- Key Functionalities:
+Description: A website that allows users to search for AI agents for specific tasks, as well as upload and share their own AI agents for others to buy or rent.
+Purpose: To create an accessible online marketplace for AI agents where users can both find solutions for specific needs and monetize their own agents.
+Pages & Their Descriptions:
+  - Landing Page: The initial page that introduces the service with a clear introduction, navigation links to key sections, and a strong call-to-action to explore the site.
+  - Home Page: The main entry point after the landing page, featuring a hero section, featured content, and guides for signing in or exploring the marketplace.
+  - Profile Page: A personalized dashboard where authenticated users can manage their profiles, view their uploads, track purchases or rentals, and adjust settings.
+  - Marketplace Page: A curated section displaying available AI agents with filtering and search options, allowing users to browse, purchase, or rent agents.
+Key Functionalities:
   - User Authentication: Login with Google using Firebase.
-  - Profile Management: User profiles to manage personal information and uploaded agents.
-  - AI Agent Marketplace: Browse, search, and filter AI agents.
-  - Upload & Sharing: Enable users to upload and share their own AI agents.
+  - Profile Management: Manage personal details, uploaded agents, and purchase history.
+  - AI Agent Marketplace: Search, filter, and browse available AI agents.
+  - Upload & Sharing: Allow users to upload and share their own AI agents.
   - Transaction Support: Facilitate buying or renting of AI agents.
 
 2. Dependencies & Technologies:

@@ -1,21 +1,24 @@
 // src/App.jsx
 import { Routes, Route, Link } from 'react-router-dom'
+import LandingPage from './pages/LandingPage'
 import Home from './pages/Home'
-import About from './pages/About'
-import Contact from './pages/Contact'
+import ProfilePage from './pages/ProfilePage'
+import MarketplacePage from './pages/MarketplacePage'
 
 function App() {
   return (
     <div>
       <nav style={{ marginBottom: '1rem' }}>
-        <Link to="/">Home</Link> |{' '}
-        <Link to="/about">About</Link> |{' '}
-        <Link to="/contact">Contact</Link>
+        <Link to="/">Landing</Link> |{' '}
+        <Link to="/home">Home</Link> |{' '}
+        <Link to="/profile">Profile</Link> |{' '}
+        <Link to="/marketplace">Marketplace</Link>
       </nav>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/profile" element={<ProfilePage />} />
+        <Route path="/marketplace" element={<MarketplacePage />} />
       </Routes>
     </div>
   )
