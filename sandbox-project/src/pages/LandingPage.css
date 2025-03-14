@@ -1,3 +1,4 @@
+/* src/pages/LandingPage.css */
 .landing-page {
     display: flex;
     flex-direction: column;
@@ -333,3 +334,4 @@
       padding: 2rem;
     }
   }
+  

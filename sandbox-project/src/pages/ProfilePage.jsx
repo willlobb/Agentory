@@ -1,15 +1,26 @@
 // src/pages/ProfilePage.jsx
 import React from 'react';
+import { useAuth } from '../context/AuthContext';
 import './ProfilePage.css';
 
 function ProfilePage() {
+  const { currentUser } = useAuth();
+
+  if (!currentUser) {
+    return <p>Loading profile...</p>;
+  }
+
   return (
     <div className="profile-page">
       <div className="profile-sidebar">
-        <div className="profile-picture"></div>
+        <img 
+          src={currentUser.photoURL || 'https://randomuser.me/api/portraits/lego/1.jpg'} 
+          alt="Profile" 
+          className="profile-picture" 
+        />
         <div className="profile-info">
-          <h2>John Doe</h2>
-          <p>john@example.com</p>
+          <h2>{currentUser.displayName}</h2>
+          <p>{currentUser.email}</p>
           <div className="profile-stats">
             <div className="stat-item">
               <div>5</div>
