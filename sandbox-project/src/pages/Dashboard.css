@@ -1,0 +1,78 @@
+.dashboard-page {
+  padding: 20px;
+  min-height: 80vh;
+}
+
+.welcome-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.welcome-section h1 {
+  margin-bottom: 1rem;
+  color: #4f46e5;
+}
+
+.agent-categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.category-card {
+  background-color: #1e1e1e;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.category-card:hover {
+  transform: scale(1.05);
+}
+
+.category-card h3 {
+  color: #10b981;
+}
+
+.recent-agents {
+  margin-top: 2rem;
+}
+
+.recent-agents h2 {
+  color: #4f46e5;
+  margin-bottom: 1rem;
+}
+
+.agent-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.cta-buttons a {
+  padding: 0.6em 1.2em;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  color: white;
+}
+
+.btn-primary {
+  background-color: #4f46e5;
+}
+
+.btn-secondary {
+  background-color: #10b981;
+} 

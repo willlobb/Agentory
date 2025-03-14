@@ -18,10 +18,36 @@
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    margin: 0 auto 1rem;
+    margin: 0 auto 1.5rem;
     display: block;
     object-fit: cover;
     background-color: #3a3a3a;
+    border: 3px solid rgba(79, 70, 229, 0.6);
+    box-shadow: 0 0 20px rgba(79, 70, 229, 0.3), 
+                0 0 0 2px rgba(16, 185, 129, 0.3);
+    padding: 4px;
+    background-clip: content-box;
+    background-image: linear-gradient(45deg, #1e1e1e, #2a2a2a);
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+  }
+  
+  .profile-picture:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(79, 70, 229, 0.5), 
+                0 0 0 3px rgba(16, 185, 129, 0.5);
+  }
+  
+  .profile-picture::after {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    right: -8px;
+    bottom: -8px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, rgba(79, 70, 229, 0.15), rgba(16, 185, 129, 0.15));
+    z-index: -1;
   }
   
   .profile-info h2 {
@@ -85,4 +111,88 @@
       grid-template-columns: 1fr;
     }
   }
+  
+/* Navbar Profile Styling */
+.navbar-profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 30px;
+  transition: background-color 0.3s;
+}
+
+.navbar-profile:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.navbar-profile-picture {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(79, 70, 229, 0.6);
+  box-shadow: 0 0 10px rgba(79, 70, 229, 0.3), 
+              0 0 0 1px rgba(16, 185, 129, 0.3);
+  padding: 2px;
+  background-clip: content-box;
+  background-image: linear-gradient(45deg, #1e1e1e, #2a2a2a);
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+}
+
+.navbar-profile:hover .navbar-profile-picture {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(79, 70, 229, 0.5), 
+              0 0 0 2px rgba(16, 185, 129, 0.5);
+}
+
+.navbar-profile-picture::after {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, rgba(79, 70, 229, 0.15), rgba(16, 185, 129, 0.15));
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.navbar-profile:hover .navbar-profile-picture::after {
+  opacity: 1;
+}
+
+.navbar-profile-name {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: white;
+  margin: 0;
+  background: linear-gradient(90deg, #ffffff, rgba(255, 255, 255, 0.85));
+  -webkit-background-clip: text;
+  background-clip: text;
+  transition: color 0.3s;
+}
+
+.navbar-profile:hover .navbar-profile-name {
+  background: linear-gradient(90deg, #4f46e5, #10b981);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Status indicator dot - optional enhancement */
+.navbar-profile-status {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #10b981; /* Online status - green */
+  border: 2px solid #1e1e1e;
+}
   

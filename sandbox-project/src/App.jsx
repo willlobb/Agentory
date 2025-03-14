@@ -1,7 +1,7 @@
 // src/App.jsx
 import { Routes, Route, Link, useLocation } from 'react-router-dom'
 import LandingPage from './pages/LandingPage'
-import Home from './pages/Home'
+import Dashboard from './pages/Dashboard'
 import ProfilePage from './pages/ProfilePage'
 import MarketplacePage from './pages/MarketplacePage'
 import { AuthProvider, useAuth } from './context/AuthContext'
@@ -50,11 +50,14 @@ function NavBar() {
       {currentUser && (
         <div className="user-menu">
           <div className="user-info">
-            <img 
-              src={currentUser.photoURL || 'https://randomuser.me/api/portraits/lego/1.jpg'} 
-              alt="User" 
-              className="user-avatar" 
-            />
+            <div className="avatar-container">
+              <img 
+                src={currentUser.photoURL || 'https://randomuser.me/api/portraits/lego/1.jpg'} 
+                alt="User" 
+                className="user-avatar" 
+              />
+              <span className="user-status"></span>
+            </div>
             <span className="user-name">{currentUser.displayName}</span>
           </div>
           <button onClick={logout} className="sign-out-btn">
@@ -78,7 +81,7 @@ function App() {
         <div className="container">
           <Routes>
             <Route path="/" element={<LandingPage />} />
-            <Route path="/home" element={<Home />} />
+            <Route path="/home" element={<Dashboard />} />
             <Route path="/profile" element={<ProfilePage />} />
             <Route path="/marketplace" element={<MarketplacePage />} />
           </Routes>

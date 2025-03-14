@@ -1,11 +1,10 @@
-// src/pages/Home.jsx
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Home.css';
+import './Dashboard.css';
 
-function Home() {
+function Dashboard() {
   return (
-    <div className="home-page">
+    <div className="dashboard-page">
       <section className="welcome-section">
         <h1>Welcome to AI Agent Finder</h1>
         <p>Discover the perfect AI agent for your needs or share your own creations</p>
@@ -51,4 +50,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Dashboard; 

@@ -132,12 +132,7 @@ function LandingPage() {
           <div className="auth-options">
             <form className="signup-form" onSubmit={(e) => e.preventDefault()}>
               <h3>Get Started Today</h3>
-              <div className="form-group">
-                <input type="email" placeholder="Email address" />
-              </div>
-              <div className="form-group">
-                <input type="password" placeholder="Password" />
-              </div>
+              
               <button
                 type="button"
                 className="btn-primary signup-btn"
@@ -145,23 +140,7 @@ function LandingPage() {
               >
                 Sign In with Google
               </button>
-              <p className="login-text">
-                Already have an account? <a href="#">Log in</a>
-              </p>
             </form>
-          </div>
-          
-          <div className="or-divider">
-            <span>OR</span>
-          </div>
-          
-          <div className="guest-options">
-            <Link to="/marketplace">
-              <button className="btn-secondary">Browse as Guest</button>
-            </Link>
-            <Link to="/home">
-              <button className="btn-outline">View Dashboard Demo</button>
-            </Link>
           </div>
         </div>
       </div>
