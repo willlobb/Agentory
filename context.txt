@@ -4,6 +4,7 @@ Project Context File
 
 1. Project Overview:
 --------------------
+Project Name: Agentory 
 Description: A website that allows users to search for AI agents for specific tasks, as well as upload and share their own AI agents for others to buy or rent.
 Purpose: To create an accessible online marketplace for AI agents where users can both find solutions for specific needs and monetize their own agents.
 Pages & Their Descriptions:
