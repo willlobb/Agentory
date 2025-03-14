@@ -21,7 +21,7 @@ export const signInWithGoogle = async () => {
   try {
     const result = await signInWithPopup(auth, provider);
     console.log("User signed in:", result.user);
-    // Set your user state here if needed.
+    // The onAuthStateChanged listener in AuthContext will update currentUser
   } catch (error) {
     console.error("Error during sign in:", error);
   }
