@@ -1,6 +1,7 @@
 // src/pages/LandingPage.jsx
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { signInWithGoogle } from '../firebase-config';
 import './LandingPage.css';
 
 function LandingPage() {
@@ -8,11 +9,14 @@ function LandingPage() {
     <div className="landing-page">
       <div className="hero">
         <h1>Welcome to Agentory</h1>
-        <p className="hero-subtitle">Your marketplace for advanced AI agents that transform the way you work</p>
+        <p className="hero-subtitle">
+          Your marketplace for advanced AI agents that transform the way you work
+        </p>
         
         <div className="cta-section">
           <div className="auth-options">
-            <form className="signup-form">
+            {/* Prevent the form from submitting */}
+            <form className="signup-form" onSubmit={(e) => e.preventDefault()}>
               <h3>Get Started Today</h3>
               <div className="form-group">
                 <input type="email" placeholder="Email address" />
@@ -20,8 +24,17 @@ function LandingPage() {
               <div className="form-group">
                 <input type="password" placeholder="Password" />
               </div>
-              <button className="btn-primary signup-btn">Sign Up</button>
-              <p className="login-text">Already have an account? <a href="#">Log in</a></p>
+              {/* Use the Google sign‑in button */}
+              <button
+                type="button"
+                className="btn-primary signup-btn"
+                onClick={signInWithGoogle}
+              >
+                Sign In with Google
+              </button>
+              <p className="login-text">
+                Already have an account? <a href="#">Log in</a>
+              </p>
             </form>
           </div>
           
@@ -102,7 +115,12 @@ function LandingPage() {
       <div className="call-to-action">
         <h2>Ready to get started?</h2>
         <p>Join thousands of users already leveraging the power of AI agents</p>
-        <button className="btn-primary cta-button">Sign Up Now</button>
+        <button
+          className="btn-primary cta-button"
+          onClick={signInWithGoogle}
+        >
+          Sign Up Now
+        </button>
       </div>
     </div>
   );
