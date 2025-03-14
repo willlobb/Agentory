@@ -1,30 +1,45 @@
+// src/pages/ProfilePage.jsx
 import React from 'react';
+import './ProfilePage.css';
 
 function ProfilePage() {
   return (
-    <div>
-      <h1>User Profile</h1>
-      <div className="profile-section">
-        <div className="user-info">
-          <h2>Personal Details</h2>
-          <p>Name: John Doe</p>
-          <p>Email: john@example.com</p>
-          <button>Edit Profile</button>
+    <div className="profile-page">
+      <div className="profile-sidebar">
+        <div className="profile-picture"></div>
+        <div className="profile-info">
+          <h2>John Doe</h2>
+          <p>john@example.com</p>
+          <div className="profile-stats">
+            <div className="stat-item">
+              <div>5</div>
+              <div>Uploads</div>
+            </div>
+            <div className="stat-item">
+              <div>12</div>
+              <div>Purchases</div>
+            </div>
+          </div>
         </div>
-        
-        <div className="user-uploads">
-          <h2>Your Uploaded Agents</h2>
-          <p>You haven't uploaded any agents yet.</p>
-          <button>Upload New Agent</button>
-        </div>
-        
-        <div className="purchase-history">
-          <h2>Purchase History</h2>
-          <p>No purchase history available.</p>
+      </div>
+      
+      <div className="profile-content">
+        <div className="content-section">
+          <div className="profile-tabs">
+            <button className="profile-tab active">Uploads</button>
+            <button className="profile-tab">Purchases</button>
+            <button className="profile-tab">Settings</button>
+          </div>
+          
+          <div className="user-uploads">
+            <h2>Your Uploaded Agents</h2>
+            <p>You haven't uploaded any agents yet.</p>
+            <button>Upload New Agent</button>
+          </div>
         </div>
       </div>
     </div>
   );
 }
 
-export default ProfilePage; 
+export default ProfilePage;
